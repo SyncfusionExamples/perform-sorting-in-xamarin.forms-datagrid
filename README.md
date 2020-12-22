@@ -1,0 +1,2 @@
+# perform-sorting-in-xamarin.forms-datagrid
+A quick-start project that helps you to perform sort operations in Syncfusion Xamarin.Forms DataGrid easily. In this example, you will learn how to enable sorting and tristate sorting. Also, you will learn how to sort columns programmatically, sort columns by double clicking and disable sorting for an individual column in the Syncfusion Xamarin.Forms DataGrid.
