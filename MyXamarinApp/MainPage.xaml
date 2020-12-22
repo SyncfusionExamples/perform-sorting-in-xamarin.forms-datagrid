@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:Syncfusion="clr-namespace:Syncfusion.SfDataGrid.XForms;assembly=Syncfusion.SfDataGrid.XForms"
+             xmlns:iOS="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             iOS:Page.UseSafeArea="True"
+             xmlns:Local="clr-namespace:MyXamarinApp"
+             x:Class="MyXamarinApp.MainPage">
+
+    <ContentPage.BindingContext>
+        <Local:ViewModel x:Name="viewModel"/>
+    </ContentPage.BindingContext>
+    
+        <Syncfusion:SfDataGrid x:Name="dataGrid"
+                               ItemsSource="{Binding OrderInfoCollection}"
+                               DefaultColumnWidth="100"
+                               AllowSorting="True"
+                               AllowTriStateSorting="True"
+                               AllowMultiSorting="True"
+                               SortTapAction="DoubleTap"
+                               >
+            <Syncfusion:SfDataGrid.SortColumnDescriptions>
+                <Syncfusion:SortColumnDescription ColumnName="OrderID" SortDirection="Descending"></Syncfusion:SortColumnDescription>
+            </Syncfusion:SfDataGrid.SortColumnDescriptions>
+        </Syncfusion:SfDataGrid>
+</ContentPage>
